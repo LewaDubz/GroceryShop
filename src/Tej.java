@@ -2,15 +2,15 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 
-public class Tej {
-	
+public abstract class Tej {
+private long vonalKod;
 private int urtartalom;
 private String gyarto;
 private Date szavatossagiIdo;
 private double zsirtartalom;
 private long ar;
 
-	public Tej(int urtartalom , String gyarto , Date szavatossagiIdo , double zsirtartalom , long ar)
+	public Tej(long vonalKod, int urtartalom , String gyarto , Date szavatossagiIdo , double zsirtartalom , long ar)
 	{
 		this.urtartalom = urtartalom;
 		this.gyarto = gyarto;
@@ -18,10 +18,13 @@ private long ar;
 		this.zsirtartalom = zsirtartalom;
 		this.ar = ar;
 	}
-	
+	private long getVonalKod()
+	{
+		return this.vonalKod;
+	}
 	private boolean joMeg(){
-		if (LocalDateTime.now().compareTo(szavatossagiIdo)<0)
-			{return true;}
+		//if (LocalDateTime.now().compareTo(szavatossagiIdo)<0)
+		//	{return true;}
 	return false;
 	}
 	
@@ -35,7 +38,7 @@ private long ar;
 	private long getAr()
 	{	return this.ar;
 	}
-	@private String toString()
+	private String toString()
 	{	return this.toString();
 	}
 }
