@@ -19,11 +19,11 @@ private long ar;
 		this.zsirtartalom = zsirtartalom;
 		this.ar = ar;
 	}
-	private long getVonalKod()
+	public Long getVonalKod()
 	{
 		return vonalKod;
 	}
-	private boolean joMeg(){
+	public boolean joMeg(){
 		//if (LocalDateTime.now().compareTo(szavatossagiIdo)<0)
 		//	{return true;}
 	return false;
@@ -33,7 +33,7 @@ private long ar;
 		return urtartalom;
 	}
 	
-	private String getGyarto(){
+	public String getGyarto(){
 		return gyarto;
 	}
 	private long getAr()

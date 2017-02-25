@@ -1,32 +1,30 @@
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
-public class Elelmiszer {
-	private Long vonalKod;
-	private String gyarto;
-	private Date szavatossagiIdo;
+public abstract class Elelmiszer extends Aru{
+	protected SimpleDateFormat sdf;
+	protected Date szavatossagiIdo;
+	protected double zsirtartalom;
 	
 	protected Elelmiszer(Long vonalKod ,String gyarto ,Date szavatossagiIdo)
 	{
-		this.vonalKod = vonalKod ;
-		this.gyarto = gyarto  ;
-		this.szavatossagiIdo = szavatossagiIdo ;
+		super(vonalKod,gyarto);
+		this.szavatossagiIdo = szavatossagiIdo;
+		this.sdf = new SimpleDateFormat("yyyy/MM/dd");
+
 	}
-	private Long getVonalKod()
+	public Long getVonalKod()
 	{
 		return vonalKod;
 	}
-	private boolean joMeg()
-	{
-		return true;
-	}
-	private String getGyarto()
+	public abstract boolean joMeg();
+	
+	public String getGyarto()
 	{
 		return gyarto;
 	}
-	private Date getSzavatossagiIdo()
-	{
-		return szavatossagiIdo;
-	}
+	public abstract Date getSzavatossagiIdo();
+	
 	/*private String toString()
 	{
 		return this.toString();*/
