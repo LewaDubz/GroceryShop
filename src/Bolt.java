@@ -1,3 +1,4 @@
+import java.util.Hashtable;
 
 public class Bolt {
 	private String nev;
@@ -5,12 +6,13 @@ public class Bolt {
 	private String tulajdonos;
 	private Tej[] tejpult;
 	private int flag;
+	private Hashtable<Long,BoltBejegyzes> elelmiszerpult = new Hashtable<Long,BoltBejegyzes>();
 	
-	public Bolt(String nev,String cim,String tulajdonos,Tej[] tejpult)
+	public Bolt(String nev,String cim,String tulajdonos,Hashtable elelmiszerpult)
 	{	this.nev = nev;
 		this.cim = cim;
 		this.tulajdonos = tulajdonos;
-		this.tejpult = tejpult;
+		this.elelmiszerpult = elelmiszerpult;
 	}
 	public Bolt(String nev,String cim,String tulajdonos)
 	{	this.nev = nev;
@@ -30,6 +32,10 @@ public class Bolt {
 	}
 	private boolean vanMegTej()
 	{
+	return false;
+	}
+	private boolean vanMegSajt()
+	{
 		return true;
 	}
 	private void TejvasarolTej()
@@ -37,6 +43,49 @@ public class Bolt {
 	}
 	private void feltoltTej()
 	{
+	}
+	public class BoltBejegyzes {
+		private Tej t;
+		private int mennyiseg;
+		private int ar;
+		
+		public BoltBejegyzes(Tej t,int mennyiseg ,int ar)
+		{this.t = t;
+		this.ar = ar;
+		this.mennyiseg = mennyiseg;
+		}
+		private Tej getT()
+		{
+			return t;
+		}
+		private void setT(Tej t)
+		{
+			this.t = t;
+		}
+		private int getMennyiseg()
+		{
+		return mennyiseg;
+		}
+		private void setMennyiseg(int mennyiseg)
+		{
+			this.mennyiseg = mennyiseg;
+		}
+		private void adMennyiseg(int mennyiseg)
+		{
+			this.mennyiseg += mennyiseg;
+		}
+		private void levonMennyiseg(int mennyiseg)
+		{
+			this.mennyiseg -= mennyiseg;
+		}
+		private int getAr()
+		{
+			return ar;
+		}
+		private void setAr(int ar)
+		{
+			this.ar =ar;
+		}
 	}
 
 }

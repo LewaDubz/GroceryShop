@@ -21,7 +21,7 @@ private long ar;
 	}
 	private long getVonalKod()
 	{
-		return this.vonalKod;
+		return vonalKod;
 	}
 	private boolean joMeg(){
 		//if (LocalDateTime.now().compareTo(szavatossagiIdo)<0)
@@ -30,61 +30,19 @@ private long ar;
 	}
 	
 	private int getUrtartalom(){
-		return this.urtartalom;
+		return urtartalom;
 	}
 	
 	private String getGyarto(){
-		return this.gyarto;
+		return gyarto;
 	}
 	private long getAr()
-	{	return this.ar;
+	{	return ar;
 	}
-	private String toString()
+	/*private String toString()
 	{	return this.toString();
-	}
+	}*/
 	
-	public class BoltBejegyzes {
-		private Tej t;
-		private int mennyiseg;
-		private int ar;
-		
-		public BoltBejegyzes(Tej t,int mennyiseg ,int ar)
-		{this.t = t;
-		this.ar = ar;
-		this.mennyiseg = mennyiseg;
-		}
-		private Tej getT()
-		{
-			return t;
-		}
-		private void setT(Tej t)
-		{
-			this.t = t;
-		}
-		private int getMennyiseg()
-		{
-		return this.mennyiseg;
-		}
-		private void setMennyiseg(int mennyiseg)
-		{
-			this.mennyiseg = mennyiseg;
-		}
-		private void adMennyiseg(int mennyiseg)
-		{
-			this.mennyiseg += mennyiseg;
-		}
-		private void levonMennyiseg(int mennyiseg)
-		{
-			this.mennyiseg -= mennyiseg;
-		}
-		private int getAr()
-		{
-			return this.ar;
-		}
-		private void setAr(int ar)
-		{
-			this.ar =ar;
-		}
-	}
+	
 	
 }
