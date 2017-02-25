@@ -38,4 +38,5 @@ public class Bolt {
 	private void feltoltTej()
 	{
 	}
+
 }

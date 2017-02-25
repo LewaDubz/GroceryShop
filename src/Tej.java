@@ -41,4 +41,49 @@ private long ar;
 	private String toString()
 	{	return this.toString();
 	}
+	
+	public class BoltBejegyzes {
+		private Tej t;
+		private int mennyiseg;
+		private int ar;
+		
+		public BoltBejegyzes(Tej t,int mennyiseg ,int ar)
+		{this.t = t;
+		this.ar = ar;
+		this.mennyiseg = mennyiseg;
+		}
+		private Tej getT()
+		{
+			return t;
+		}
+		private void setT(Tej t)
+		{
+			this.t = t;
+		}
+		private int getMennyiseg()
+		{
+		return this.mennyiseg;
+		}
+		private void setMennyiseg(int mennyiseg)
+		{
+			this.mennyiseg = mennyiseg;
+		}
+		private void adMennyiseg(int mennyiseg)
+		{
+			this.mennyiseg += mennyiseg;
+		}
+		private void levonMennyiseg(int mennyiseg)
+		{
+			this.mennyiseg -= mennyiseg;
+		}
+		private int getAr()
+		{
+			return this.ar;
+		}
+		private void setAr(int ar)
+		{
+			this.ar =a r;
+		}
+	}
+	
 }
