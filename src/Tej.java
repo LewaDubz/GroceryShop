@@ -10,7 +10,7 @@ private Date szavatossagiIdo;
 private double zsirtartalom;
 private long ar;
 
-	public Tej(long vonalKod, int urtartalom , String gyarto , Date szavatossagiIdo , double zsirtartalom , long ar)
+	public Tej(long vonalKod, int urtartalom , String gyarto , Date szavatossagiIdo , double zsirtartalom)
 	{
 		super(vonalKod,gyarto,szavatossagiIdo);
 		this.urtartalom = urtartalom;

@@ -30,9 +30,13 @@ public class Bolt {
 	{
 		return this.tulajdonos;
 	}
-	private boolean vanMegTej()
-	{
-	return false;
+	private boolean vanMegTej() {
+		for (Long key : elelmiszerpult.keySet()) {
+			if (Tej.class.isAssignableFrom(elelmiszerpult.get(key).getAru().getClass())) {
+				return (elelmiszerpult.get(key).getMennyiseg()) > 0;
+			}
+		}
+		return false;
 	}
 	private boolean vanMegSajt()
 	{
@@ -81,6 +85,9 @@ public class Bolt {
 		private int getAr()
 		{
 			return ar;
+		}
+		private Aru getAru() {
+			return a;
 		}
 		private void setAr(int ar)
 		{
