@@ -1,17 +1,10 @@
-import java.sql.Date;
+import java.util.Date;
 
-public abstract class TartosTej extends Tej {
+import bolt.aruk.Tej;
 
+public class TartosTej extends Tej {
 	public TartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirtartalom) {
 		super(vonalKod, urtartalom, gyarto, szavatossagiIdo, zsirtartalom);
-		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 
 }

@@ -1,98 +1,107 @@
-import java.util.Hashtable;
+import bolt.aruk.*;
+import bolt.*;
 
 public class Bolt {
-	private String nev;
-	private String cim;
-	private String tulajdonos;
-	private Tej[] tejpult;
-	private int flag;
-	private Hashtable<Long,BoltBejegyzes> elelmiszerpult = new Hashtable<Long,BoltBejegyzes>();
+	protected String nev;
+	protected String cim;
+	protected String tulajdonos;
+	protected Tej[] tejpult;
+	protected int flag;
 	
-	public Bolt(String nev,String cim,String tulajdonos,Hashtable elelmiszerpult)
-	{	this.nev = nev;
+	public Bolt(String nev, String cim, String tulajdonos, Tej[] tejpult) {
+		super();
+		this.nev = nev;
 		this.cim = cim;
 		this.tulajdonos = tulajdonos;
-		this.elelmiszerpult = elelmiszerpult;
-	}
-	public Bolt(String nev,String cim,String tulajdonos)
-	{	this.nev = nev;
-		this.cim = cim;
-	}
-	private String getNev()
-	{
-		return this.nev;
-	}
-	private String getCim()
-	{
-		return this.cim;
-	}
-	private String getTulajdonos()
-	{
-		return this.tulajdonos;
-	}
-	private boolean vanMegTej() {
-		for (Long key : elelmiszerpult.keySet()) {
-			if (Tej.class.isAssignableFrom(elelmiszerpult.get(key).getAru().getClass())) {
-				return (elelmiszerpult.get(key).getMennyiseg()) > 0;
-			}
-		}
-		return false;
-	}
-	private boolean vanMegSajt()
-	{
-		return true;
-	}
-	private void TejvasarolTej()
-	{
-	}
-	private void feltoltTej()
-	{
-	}
-	public class BoltBejegyzes {
-		private Tej t;
-		private int mennyiseg;
-		private int ar;
-		
-		public BoltBejegyzes(Tej t,int mennyiseg ,int ar)
-		{this.t = t;
-		this.ar = ar;
-		this.mennyiseg = mennyiseg;
-		}
-		private Tej getT()
-		{
-			return t;
-		}
-		private void setT(Tej t)
-		{
-			this.t = t;
-		}
-		private int getMennyiseg()
-		{
-		return mennyiseg;
-		}
-		private void setMennyiseg(int mennyiseg)
-		{
-			this.mennyiseg = mennyiseg;
-		}
-		private void adMennyiseg(int mennyiseg)
-		{
-			this.mennyiseg += mennyiseg;
-		}
-		private void levonMennyiseg(int mennyiseg)
-		{
-			this.mennyiseg -= mennyiseg;
-		}
-		private int getAr()
-		{
-			return ar;
-		}
-		private Aru getAru() {
-			return a;
-		}
-		private void setAr(int ar)
-		{
-			this.ar =ar;
-		}
+		this.tejpult = tejpult;
 	}
 
+	public Bolt(String nev, String cim, String tulajdonos) {
+		super();
+		this.nev = nev;
+		this.cim = cim;
+		this.tulajdonos = tulajdonos;
+	}
+
+	/**
+	 * @return the nev
+	 */
+	public String getNev() {
+		return nev;
+	}
+
+	/**
+	 * @return the cim
+	 */
+	public String getCim() {
+		return cim;
+	}
+
+	/**
+	 * @return the tulajdonos
+	 */
+	public String getTulajdonos() {
+		return tulajdonos;
+	}
+	private boolean vanMegadottAru(Object obj){
+		return false;
+	}
+	private void vanMegtej(){}
+	private void vasaroltej(Tej m){}
+	private void feltoltTej(Tej m){}
+	
+public class BoltBejegyzes{
+	private Aru a;
+	private long mennyiseg;
+	private long ar;
+	/**
+	 * @return the a
+	 */
+	public Aru getA() {
+		return a;
+	}
+	/**
+	 * @param a the a to set
+	 */
+	public void setA(Aru a) {
+		this.a = a;
+	}
+	/**
+	 * @return the mennyiseg
+	 */
+	public long getMennyiseg() {
+		return mennyiseg;
+	}
+	/**
+	 * @param mennyiseg the mennyiseg to set
+	 */
+	public void setMennyiseg(long mennyiseg) {
+		this.mennyiseg = mennyiseg;
+	}
+	public void levonMennyiseg(long mennyiseg){
+		this.mennyiseg -= mennyiseg;
+	}
+	public void adMennyiseg(long mennyiseg){
+		this.mennyiseg += mennyiseg;
+	}
+	/**
+	 *
+	 * @return the ar
+	 */
+	public long getAr() {
+		return ar;
+	}
+	/**
+	 * @param ar the ar to set
+	 */
+	public void setAr(long ar) {
+		this.ar = ar;
+	}
+	
+	
+	}
+
+	
+
 }
+

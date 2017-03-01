@@ -1,9 +1,5 @@
 import java.sql.Date;
-import bolt.aruk.Sajt;
-import bolt.aruk.Szappan;
-import bolt.aruk.Tej;
-import bolt.aruk.tej.FeltartosTej;
-import bolt.aruk.tej.TartosTej;
+
 
 public class BoltFactory {
 

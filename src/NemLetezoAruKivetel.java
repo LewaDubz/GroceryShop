@@ -1,8 +1,10 @@
 
-public class NemLetezoAruKivetel extends Kivetel {
-	public NemLetezoAruKivetel(String message)
-	{	
-		
+public class NemLetezoAruKivetel extends BoltKivetel {
+
+
+	public NemLetezoAruKivetel(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
 	}
 
 }
